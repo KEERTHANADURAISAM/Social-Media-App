@@ -1,13 +1,35 @@
-.Profile{
+.Profile {
     position: relative;
     display: grid;
     grid-template-columns: 18rem auto 20rem;
     gap: 1rem;
-}
-
-
-.Profile-center{
+    padding: 1rem;
+  }
+  
+  /* Profile Center */
+  .Profile-center {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-}
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .Profile {
+      grid-template-columns: 16rem auto; /* Adjusts for tablets */
+      gap: 0.8rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .Profile {
+      grid-template-columns: 100%; /* Stacks elements in a single column */
+      gap: 1rem;
+      padding: 1.5rem;
+    }
+  
+    .Profile-center {
+      gap: 0.8rem; /* Reduces gap on smaller screens */
+    }
+  }
+  

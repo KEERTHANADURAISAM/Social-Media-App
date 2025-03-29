@@ -11,17 +11,17 @@
   --photo: #4CB256;
   --video: #4A4EB7;
   --location: #EF5757;
---shedule: #E1AE4A;
+  --schedule: #E1AE4A;
 }
 
 .App {
   overflow: hidden;
   color: var(--black);
   background: #f3f3f3;
-  padding: 1rem 1rem;
+  padding: 1rem;
 }
 
-/* blur */
+/* Blur Effect */
 .blur {
   position: absolute;
   width: 22rem;
@@ -31,6 +31,7 @@
   filter: blur(72px);
 }
 
+/* Button Styling */
 .button {
   display: flex;
   align-items: center;
@@ -40,6 +41,8 @@
   border-radius: 0.5rem;
   background: var(--buttonBg);
   transition: all 100ms ease-out;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
 }
 
 .button:hover {
@@ -49,45 +52,119 @@
   background: transparent;
 }
 
-.button:disabled{
+.button:disabled {
   background: silver;
   pointer-events: none;
 }
 
-
+/* Hide Scrollbar */
 ::-webkit-scrollbar {
   display: none;
 }
 
-
-
 /* Form Styling */
-.infoForm{
+.infoForm {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 1.5rem;
+  width: 100%;
 }
 
-.infoInput{
+.infoInput {
   border: none;
   outline: none;
   background-color: var(--inputColor);
   border-radius: 8px;
-  padding: 20px;
-  flex:1;
+  padding: 12px 16px;
+  flex: 1;
+  font-size: 1rem;
+  width: 100%;
 }
 
-.infoForm>div{
+/* Form Row */
+.infoForm > div {
   display: flex;
   gap: 1rem;
-  height: 2rem;
   width: 90%;
+  flex-wrap: wrap;
 }
 
-.infoButton{
+/* Form Submit Button */
+.infoButton {
   width: 6rem;
-  height: 2rem;
+  height: 2.5rem;
   align-self: flex-end;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .blur {
+    width: 18rem;
+    height: 12rem;
+  }
+
+  .button {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .App {
+    padding: 0.8rem;
+  }
+
+  .button {
+    font-size: 0.85rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  .infoForm > div {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .infoInput {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .infoButton {
+    width: 5.5rem;
+    height: 2.3rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .blur {
+    width: 14rem;
+    height: 10rem;
+  }
+
+  .App {
+    padding: 0.5rem;
+  }
+
+  .button {
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .infoForm {
+    gap: 1rem;
+  }
+
+  .infoInput {
+    padding: 8px;
+    font-size: 0.85rem;
+  }
+
+  .infoButton {
+    width: 5rem;
+    height: 2rem;
+    font-size: 0.85rem;
+  }
 }

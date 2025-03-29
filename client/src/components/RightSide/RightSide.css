@@ -1,32 +1,74 @@
-.RightSide{
+.RightSide {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    align-items: center;
+    padding: 1rem;
 }
 
-
-.navIcons{
+/* Navigation Icons */
+.navIcons {
     margin-top: 1rem;
     display: flex;
     justify-content: space-between;
+    width: 100%;
+    max-width: 300px; /* Limits width for better spacing */
 }
 
-.navIcons>a>img{
+.navIcons > a > img,
+.navIcons > img {
     width: 1.5rem;
     height: 1.5rem;
+    transition: transform 0.2s ease-in-out;
 }
 
-.navIcons>img{
-    width: 1.5rem;
-    height: 1.5rem;
-}
-
-.navIcons>img:hover{
+.navIcons > img:hover {
     cursor: pointer;
+    transform: scale(1.1);
 }
 
-.r-button{
-    height:3rem;
+/* Right Side Button */
+.r-button {
+    height: 3rem;
     width: 80%;
+    max-width: 250px;
     align-self: center;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .RightSide {
+        gap: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .RightSide {
+        gap: 1rem;
+        padding: 0.8rem;
+    }
+
+    .navIcons {
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .r-button {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .RightSide {
+        gap: 0.8rem;
+        padding: 0.5rem;
+    }
+
+    .navIcons {
+        gap: 0.5rem;
+    }
+
+    .r-button {
+        width: 100%;
+    }
 }

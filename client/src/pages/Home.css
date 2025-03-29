@@ -3,4 +3,21 @@
   display: grid;
   grid-template-columns: 18rem auto 20rem;
   gap: 1rem;
+  padding: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .Home {
+    grid-template-columns: 16rem auto; /* Adjusts for tablets */
+    gap: 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .Home {
+    grid-template-columns: 100%; /* Stacks elements in a single column */
+    gap: 1rem;
+    padding: 1.5rem;
+  }
 }
